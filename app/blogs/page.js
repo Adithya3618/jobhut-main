@@ -29,7 +29,7 @@ export default function BlogsPage() {
           </div>
 
           {/* Heading at the top */}
-          <h1 className="text-4xl font-bold mb-8">JobHut Blogs</h1>
+          <h1 className="text-4xl font-bold mb-8">JobHut Blog</h1>
 
           {/* 2-column layout: 70% blog list, 30% trending topics */}
           <div className="flex flex-col md:flex-row gap-8">
