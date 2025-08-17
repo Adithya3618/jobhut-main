@@ -7,8 +7,6 @@ import PageViewWrapper from '../components/PageViewWrapper'
 import AdSense from '../components/AdSense'
 import Link from 'next/link'
 import { Plus } from 'lucide-react'
-// Add TrendingTopics import (to be created)
-import TrendingTopics from '../components/TrendingTopics'
 
 export const metadata = {
   title: 'Blogs | JobHut',
@@ -31,18 +29,11 @@ export default function BlogsPage() {
           {/* Heading at the top */}
           <h1 className="text-4xl font-bold mb-8">JobHut Blog</h1>
 
-          {/* 2-column layout: 70% blog list, 30% trending topics */}
-          <div className="flex flex-col md:flex-row gap-8">
-            {/* Blog list (left, 70%) */}
-            <div className="w-full md:w-[70%]">
-              <Suspense fallback={<Loading />}>
-                <BlogList />
-              </Suspense>
-            </div>
-            {/* Trending topics (right, 30%) */}
-            <div className="w-full md:w-[30%]">
-              <TrendingTopics />
-            </div>
+          {/* Blog list */}
+          <div className="w-full">
+            <Suspense fallback={<Loading />}>
+              <BlogList />
+            </Suspense>
           </div>
         </main>
         <Footer />
