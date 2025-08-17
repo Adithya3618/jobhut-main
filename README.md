@@ -25,8 +25,8 @@ JobHut is a modern job aggregation platform that brings together opportunities f
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/jobhut.git
-cd jobhut
+git clone https://github.com/Adithya3618/jobhut-main.git
+cd jobhut-main
 ```
 
 2. Install dependencies:
@@ -52,10 +52,10 @@ yarn dev
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Framework**: [Next.js 15](https://nextjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Database**: [Your Database Choice]
-- **Authentication**: [Your Auth Choice]
+- **Database**: [MongoDB Atlas](https://www.mongodb.com/atlas/database)
+- **Authentication**: [JWT]
 - **Deployment**: [Vercel](https://vercel.com)
 
 ## 📂 Project Structure
@@ -118,6 +118,22 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🧩 Setup and Troubleshooting
+
+- Environment variables (create .env):
+  - MONGODB_URI=mongodb+srv://<user>:<pass>@<cluster>/<db>?retryWrites=true&w=majority
+  - JWT_SECRET=<your secret>
+  - Optional: JOOBLE_API_KEY=<your key>
+- Seed configs and admin (optional):
+  - node insertJoobleConfig.js
+  - node insertAdmin.js
+- Test MongoDB connectivity:
+  - node testConnection.js
+- Troubleshooting:
+  - MongoDB SSL/TLS errors (tlsv1 alert internal error): ensure your IP is allowed in Atlas Network Access, disable HTTPS scanning/proxy or try a different network, verify system clock, and use the SRV URI.
+  - Jooble: response fields are title, company, location, snippet, type, link. The UI maps link to Apply Link and strips HTML from snippet.
+  - CoreSignal 401/402: indicates unauthorized or insufficient credits; verify API key and plan.
 
 ## 🚀 Deployment
 
