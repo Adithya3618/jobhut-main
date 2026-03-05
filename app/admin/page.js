@@ -6,7 +6,7 @@ import PageViewWrapper from '../components/PageViewWrapper'
 export default function Admin() {
   return (
     <PageViewWrapper>
-    <div>
+    <div> 
       <Header />
       <AdminLogin />
       <Footer/>
